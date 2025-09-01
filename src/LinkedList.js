@@ -12,10 +12,10 @@ export class Playlist {
   }
 
   addSong(song) {
-    const newSong = new Node(song);
+    const newNode = new Node(song);
 
     if (!this.head) {
-      this.head = newSong;
+      this.head = newNode;
       return;
     }
 
@@ -25,7 +25,7 @@ export class Playlist {
       current = current.next;
     }
 
-    current.next = newSong;
+    current.next = newNode;
   }
 
   play() {
