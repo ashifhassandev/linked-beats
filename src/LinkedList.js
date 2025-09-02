@@ -58,7 +58,7 @@ export class Playlist {
     let current = this.head;
 
     while (current.next) {
-      if (current.song.title === title) {
+      if (current.next.song.title === title) {
         current.next = current.next.next;
         return;
       }
