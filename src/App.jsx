@@ -27,6 +27,11 @@ const App = () => {
 
   const removeSong = (title) => {
     playlist.removeSong(title);
+
+    if (currentSong && title === currentSong.title) {
+      playNextSong();
+    }
+
     setSongs(playlist.getAllSongs());
   };
 
